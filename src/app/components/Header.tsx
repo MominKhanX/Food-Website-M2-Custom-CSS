@@ -27,6 +27,7 @@ const Header = () => {
       <nav className={styles.nav}>
 
         <Link href="/" className={styles.logo}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/Images/Logo2.png" alt="Logo" />
         </Link>
 

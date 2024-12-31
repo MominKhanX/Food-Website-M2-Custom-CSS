@@ -75,7 +75,7 @@ export default function About() {
 
                     <div className={styles.timelineContent}>
                         <h3>2016</h3>
-                        <p>Gourmet Delights wins "Best Food Delivery Service" in the city and opens our second kitchen location.</p>
+                        <p>Gourmet Delights wins {"Best Food Delivery Service"} in the city and opens our second kitchen location.</p>
                     </div>
 
                 </div>

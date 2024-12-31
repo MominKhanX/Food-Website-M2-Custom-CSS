@@ -166,6 +166,7 @@ export default async function Home() {
           ].map((testimonial, i) => (
             <div key={i} className={styles.testimonial}>
 
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p>"{testimonial.text}"</p>
 
               <div className={styles.testimonialAuthor}>
