@@ -1,101 +1,239 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from './page.module.css'
+import { menuItems } from './data/menuItems'
+import { getBlogPosts } from '@/lib/blog'
+import { ArrowRight } from 'lucide-react'
 
-export default function Home() {
+export default async function Home() {
+  const featuredDishes = menuItems.slice(0, 4)
+  const recentBlogPosts = await getBlogPosts()
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <section className={styles.hero}>
+
+        <div className={styles.heroContent}>
+
+          <div className={styles.heroText}>
+
+            <h1>Savor the Flavor, <span className={styles.highlight}>Delivered</span></h1>
+
+            <p>Gourmet meals crafted with passion, brought right to your doorstep</p>
+
+            <div className={styles.ctaContainer}>
+
+              <Link href="/order" className={styles.ctaButton}>
+                Start Your Order <ArrowRight size={20} />
+              </Link>
+
+              <Link href="/menu" className={styles.secondaryButton}>
+                Explore Menu
+              </Link>
+
+            </div>
+
+          </div>
+
+          <div className={styles.heroImageContainer}>
+
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/Images/Gourmet-Burger.jpg"
+              alt="Gourmet dish"
+              width={500}
+              height={500}
+              className={styles.heroImage}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            <div className={styles.imageOverlay}></div>
+
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className={styles.heroFooter}>
+
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>1000+</span>
+            <span className={styles.statText}>Satisfied Customers</span>
+          </div>
+
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>50+</span>
+            <span className={styles.statText}>Gourmet Dishes</span>
+          </div>
+
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>30 min</span>
+            <span className={styles.statText}>Average Delivery Time</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className={styles.features}>
+
+        <div className={styles.feature}>
+
+          <Image src="/Images/QualityCheck2.png" alt="High Quality" width={300} height={50} />
+
+          <h2>Premium Quality</h2>
+
+          <p>We source only the finest ingredients for our dishes</p>
+
+        </div>
+
+        <div className={styles.feature}>
+
+          <Image src="/Images/food-delivery.jpg" alt="Fast Delivery" width={300} height={300} />
+
+          <h2>Swift Delivery</h2>
+
+          <p>Hot and fresh food delivered right to your doorstep</p>
+
+        </div>
+
+        <div className={styles.feature}>
+
+          <Image src="/Images/Menu4.png" alt="Diverse Menu" width={300} height={300} />
+
+          <h2>Diverse Menu</h2>
+
+          <p>A wide range of cuisines to satisfy every palate</p>
+
+        </div>
+
+      </section>
+
+      <section className={styles.featured}>
+
+        <h2>Featured Dishes</h2>
+
+        <div className={styles.dishes}>
+
+          {featuredDishes.map((dish) => (
+            <div key={dish.id} className={styles.dish}>
+
+              <Image src={dish.image} alt={dish.name} width={300} height={200} />
+
+              <h3>{dish.name}</h3>
+
+              <p>{dish.description}</p>
+
+              <Link href="/menu" className={styles.viewMenuButton}>View Menu</Link>
+
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      <section className={styles.chefSpotlight}>
+
+        <h2>Chef&apos;s Spotlight</h2>
+
+        <div className={styles.chefContent}>
+
+          <Image src="/Images/TeamMember3.jpg" alt="Chef Maria Rodriguez" width={400} height={800} className={styles.chefImage} />
+
+          <div className={styles.chefInfo}>
+            <h3>Chef Maria Rodriguez</h3>
+
+            <p>With over 10 years of culinary experience, Chef Maria brings her passion for innovative flavors and techniques to every dish at Gourmet Delights. Her commitment to using locally-sourced, seasonal ingredients ensures that each meal is a celebration of taste and quality.</p>
+
+            <p>Chef Maria&apos;s signature dishes, like the Gourmet Burger and Grilled Salmon, showcase her unique blend of traditional techniques and modern creativity. Her dedication to culinary excellence has earned Gourmet Delights numerous accolades and a loyal following of food enthusiasts.</p>
+
+            <Link href="/about" className={styles.learnMoreButton}>Learn More About Our Team</Link>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className={styles.testimonials}>
+
+        <h2>What Our Customers Say</h2>
+
+        <div className={styles.testimonialSlider}>
+
+          {[
+            { name: 'John D.', text: 'The food from Gourmet Delights is simply amazing. The flavors are out of this world, and the delivery is always on time!' },
+            { name: 'Sarah M.', text: 'I\'ve tried many food delivery services, but Gourmet Delights stands out for its quality and variety. The Margherita Pizza is to die for!' },
+            { name: 'Michael L.', text: 'As a busy professional, I rely on Gourmet Delights for delicious, restaurant-quality meals. Their service has never disappointed me.' }
+          ].map((testimonial, i) => (
+            <div key={i} className={styles.testimonial}>
+
+              <p>"{testimonial.text}"</p>
+
+              <div className={styles.testimonialAuthor}>
+
+                <Image src={`/Images/TeamMember${i + 1}.jpg`} alt={testimonial.name} width={50} height={50} className={styles.authorImage} />
+
+                <span>{testimonial.name}</span>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      <section className={styles.cta}>
+
+        <h2>Ready to Indulge?</h2>
+
+        <p>Treat yourself to a gourmet meal today!</p>
+
+        <Link href="/order" className={styles.ctaButton}>Order Now</Link>
+
+      </section>
+
+      <section className={styles.specialsHighlight}>
+
+        <h2>Check Out Our Specials</h2>
+
+        <p>Discover our latest culinary creations, seasonal offerings, and limited-time deals!</p>
+
+        <Link href="/specials" className={styles.specialsButton}>View Specials</Link>
+
+      </section>
+
+      <section className={styles.blogHighlight}>
+
+        <h2>From Our Blog</h2>
+
+        <div className={styles.blogPosts}>
+
+          {recentBlogPosts.slice(0, 3).map((post) => (
+            <Link href={`/blog/${post.page}/`} key={post.page} className={styles.blogPost}>
+
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                width={300}
+                height={200}
+                className={styles.blogImage}
+              />
+
+              <h3>{post.title}</h3>
+
+              <p>{post.excerpt}</p>
+
+            </Link>
+          ))}
+
+        </div>
+
+        <Link href="/blog" className={styles.viewAllButton}>View All Posts</Link>
+
+      </section>
+
     </div>
-  );
+  )
 }
+

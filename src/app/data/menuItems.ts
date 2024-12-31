@@ -1,0 +1,20 @@
+export const menuItems = [
+    { id: 1, name: 'Gourmet Burger', price: 12.99, category: 'Main Course', image: '/Images/Gourmet-Burger.jpg', description: 'A juicy beef patty topped with caramelized onions, aged cheddar, crispy bacon, and our secret sauce, served on a toasted brioche bun.' },
+    { id: 2, name: 'Caesar Salad', price: 8.99, category: 'Appetizer', image: '/Images/Caesar-Salad.jpg', description: 'Crisp romaine lettuce, homemade croutons, and shaved parmesan with our classic Caesar dressing. Add grilled chicken just for $3.' },
+    { id: 3, name: 'Margherita Pizza', price: 14.99, category: 'Main Course', image: '/Images/Margherita-Pizza.jpg', description: 'Traditional Neapolitan pizza with fresh mozzarella, tomatoes, and basil on a thin, crispy crust baked in our wood-fired oven for perfection!' },
+    { id: 4, name: 'Chocolate Lava Cake', price: 6.99, category: 'Dessert', image: '/Images/Chocolate-Lava-Cake.jpg', description: 'Indulgent chocolate cake with a luscious molten core, paired with velvety vanilla ice cream, fresh berries, and a rich chocolate drizzle topping!' },
+    { id: 5, name: 'Grilled Salmon', price: 18.99, category: 'Main Course', image: '/Images/Grilled-Salmon.jpg', description: 'Fresh Atlantic salmon fillet grilled to perfection, served with roasted vegetables and lemon butter sauce.' },
+    { id: 6, name: 'Mozzarella Sticks', price: 7.99, category: 'Appetizer', image: '/Images/Mozarella-Sticks.jpg', description: 'Golden-brown breaded mozzarella sticks served with tangy marinara sauce. Perfect for sharing!' },
+    { id: 7, name: 'Vegetarian Pasta', price: 13.99, category: 'Main Course', image: '/Images/Vegetarian-Pasta.jpg', description: 'Al dente penne pasta tossed with seasonal vegetables, olive oil, fresh herbs, and topped with shaved Parmesan.' },
+    { id: 8, name: 'Tiramisu', price: 5.99, category: 'Dessert', image: '/Images/Tiramisu1.webp', description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers and creamy mascarpone, dusted with cocoa powder.' },
+    { id: 9, name: 'Chicken Alfredo', price: 15.99, category: 'Main Course', image: '/Images/Chicken-Alfredo.jpg', description: 'Tender grilled chicken breast served over fettuccine pasta in a rich and creamy Alfredo sauce.' },
+    { id: 10, name: 'Caprese Salad', price: 9.99, category: 'Appetizer', image: '/Images/Caprese-Salad.jpeg', description: 'Fresh mozzarella, ripe tomatoes, and basil leaves drizzled with balsamic glaze and extra virgin olive oil.' },
+    { id: 11, name: 'Beef Tenderloin', price: 24.99, category: 'Main Course', image: '/Images/Beef-Tenderloin.webp', description: 'Prime beef tenderloin cooked to your liking, served with garlic mashed potatoes and seasonal vegetables.' },
+    { id: 12, name: 'Shrimp Scampi', price: 17.99, category: 'Main Course', image: '/Images/Shrimp-Scampi.jpeg', description: 'Succulent shrimp sautéed in a garlic white wine sauce, served over a bed of linguine pasta.' },
+    { id: 13, name: 'Greek Salad', price: 10.99, category: 'Appetizer', image: '/Images/Greek-Salad.jpg', description: 'Crisp lettuce, tomatoes, cucumbers, red onions, Kalamata olives, and feta cheese tossed in our house Greek dressing.' },
+    { id: 14, name: 'Mushroom Risotto', price: 14.99, category: 'Main Course', image: '/Images/Mushroom-Risotto.jpg', description: 'Creamy Arborio rice cooked with a medley of wild mushrooms, finished with truffle oil and Parmesan cheese.' },
+    { id: 15, name: 'New York Cheesecake', price: 6.99, category: 'Dessert', image: '/Images/NYC-Cheesecake.jpeg', description: 'Rich and creamy New York-style cheesecake with a graham cracker crust, topped with fresh strawberry compote.' },
+    { id: 16, name: 'Spinach and Artichoke Dip', price: 8.99, category: 'Appetizer', image: '/Images/Spinach-and-Artichoke-Dip.jpg', description: 'Creamy spinach and artichoke dip served hot with toasted pita chips and crispy tortilla chips.' },
+  ]
+  
+  

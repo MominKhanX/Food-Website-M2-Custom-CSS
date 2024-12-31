@@ -1,0 +1,473 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+
+.heroText {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.heroText h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.highlight {
+  color: #ff6b6b;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff4757;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: #ff6b6b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ff6b6b;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.heroImageContainer {
+  flex: 1;
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,107,107,0.2), rgba(255,71,87,0.2));
+  border-radius: 20px;
+}
+
+.heroFooter {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.statText {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .heroText {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+
+  .ctaContainer {
+    justify-content: center;
+  }
+
+  .heroFooter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 0 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h2 {
+  margin: 1rem 0;
+}
+
+.featured {
+  margin: 4rem 0;
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.dish {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dish:hover {
+  transform: translateY(-5px);
+}
+
+.dish img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dish h3 {
+  padding: 1rem 1rem 0.5rem;
+  margin: 0;
+}
+
+.dish p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+.viewMenuButton {
+  display: block;
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.viewMenuButton:hover {
+  background-color: #45b7ae;
+}
+
+.chefSpotlight {
+  margin: 4rem 0;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.chefSpotlight h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: larger;
+  margin-bottom: 2rem;
+}
+
+.chefContent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.chefImage {
+  border-radius: 50%;
+}
+
+.chefInfo h3 {
+  margin-bottom: 1rem;
+}
+
+.learnMoreButton {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.learnMoreButton:hover {
+  background-color: #ff4757;
+}
+
+.testimonials {
+  margin: 4rem 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonialSlider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.authorImage {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.cta {
+  text-align: center;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin: 4rem 0;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta .ctaButton {
+  background-color: white;
+  color: #ff6b6b;
+}
+
+.cta .ctaButton:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .feature {
+    margin: 1rem 0;
+  }
+
+  .chefContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.specialsHighlight {
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.specialsHighlight h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.specialsHighlight p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.specialsButton {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.specialsButton:hover {
+  background-color: #ff4757;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .specialsHighlight {
+    padding: 3rem 1rem;
+  }
+
+  .specialsHighlight h2 {
+    font-size: 2rem;
+  }
+
+  .specialsHighlight p {
+    font-size: 1rem;
+  }
+}
+
+
+
+.blogHighlight {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.blogHighlight h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blogPost {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogPost:hover {
+  transform: translateY(-5px);
+}
+
+.blogImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blogPost h3 {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.25rem;
+}
+
+.blogPost p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+.viewAllButton {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background-color: #ff4757;
+}
+
